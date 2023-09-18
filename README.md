@@ -7,4 +7,4 @@ This repository contains the labwork for the course SEG2105.
 * Jacob Tannous
 * Marc-Olivier Delisle
 * Eric Zhou
-* etc...
+* Michael Massaad
