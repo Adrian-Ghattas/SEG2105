@@ -7,33 +7,26 @@ public class Cartesian extends PointCP{
 	}
 
 	public double getXorRho() {
-		// TODO Auto-generated method stub
-		return super.xOrRho;
+		return xOrRho;
 	}
 
 	public double getYorTheta() {
-		// TODO Auto-generated method stub
-		return 0;
+		return yOrTheta;
 	}
 
-	public void convertStorageToPolar() {
-		// TODO Auto-generated method stub
-		
+	public PointCP convertStorageToPolar() {
+		super.xOrRho = Math.sqrt(xOrRho*xOrRho + yOrTheta*yOrTheta);
+        super.yOrTheta = Math.atan2(yOrTheta, xOrRho);
+        Polar polar = new Polar(xOrRho, yOrTheta);
+        return polar;
 	}
 
-	public void convertStorageToCartesian() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public PointCP rotatePoint(double rotation) {
-		// TODO Auto-generated method stub
-		return null;
+	public PointCP convertStorageToCartesian() {
+		return this;
 	}
 
 	public String toString() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	    return "Stored as Cartesian" + getXorRho() + "," + getYorTheta() + ")\n";
+	    }
 
 }
