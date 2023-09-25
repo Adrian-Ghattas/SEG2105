@@ -44,14 +44,9 @@ public PointCP(double xOrRho, double yOrTheta)
 //Instance methods **************************************************
 
 
-public abstract double getX();
+public abstract double getXorRho();
 
-public abstract double getY();
-
-public abstract double getRho();
-
-public abstract double getTheta();
-
+public abstract double getYorTheta();
 	
 /**
 * Converts Cartesian coordinates to Polar coordinates.
@@ -75,8 +70,8 @@ public double getDistance(PointCP pointB)
 {
  // Obtain differences in X and Y, sign is not important as these values
  // will be squared later.
- double deltaX = getX() - pointB.getX();
- double deltaY = getY() - pointB.getY();
+ double deltaX = getXorRho() - pointB.getXorRho();
+ double deltaY = getYorTheta() - pointB.getYorTheta();
  
  return Math.sqrt((Math.pow(deltaX, 2) + Math.pow(deltaY, 2)));
 }
