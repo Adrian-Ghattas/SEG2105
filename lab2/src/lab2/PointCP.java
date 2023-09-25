@@ -20,13 +20,13 @@ public abstract class PointCP
 * Contains the current value of X or RHO depending on the type
 * of coordinates.
 */
-private double xOrRho;
+protected double xOrRho;
 
 /**
 * Contains the current value of Y or THETA value depending on the
 * type of coordinates.
 */
-private double yOrTheta;
+protected double yOrTheta;
 	
 
 //Constructors ******************************************************
@@ -57,34 +57,6 @@ public abstract void convertStorageToPolar();
 * Converts Polar coordinates to Cartesian coordinates.
 */
 public abstract void convertStorageToCartesian();
-
-/**
-* Calculates the distance in between two points using the Pythagorean
-* theorem  (C ^ 2 = A ^ 2 + B ^ 2). Not needed until E2.30.
-*
-* @param pointA The first point.
-* @param pointB The second point.
-* @return The distance between the two points.
-*/
-public double getDistance(PointCP pointB)
-{
- // Obtain differences in X and Y, sign is not important as these values
- // will be squared later.
- double deltaX = getXorRho() - pointB.getXorRho();
- double deltaY = getYorTheta() - pointB.getYorTheta();
- 
- return Math.sqrt((Math.pow(deltaX, 2) + Math.pow(deltaY, 2)));
-}
-
-/**
-* Rotates the specified point by the specified number of degrees.
-* Not required until E2.30
-*
-* @param point The point to rotate
-* @param rotation The number of degrees to rotate the point.
-* @return The rotated image of the original point.
-*/
-public abstract PointCP rotatePoint(double rotation);
 
 /**
 * Returns information about the coordinates.
