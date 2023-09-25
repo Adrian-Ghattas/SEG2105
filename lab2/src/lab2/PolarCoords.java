@@ -1,16 +1,7 @@
+package lab2;
+
 public class PolarCoords extends PointCP
 {
-//Instance variables ************************************************
-
-/**
-* Contains the current value of RHO.
-*/
-private double rho;
-
-/**
-* Contains the current value of THETA.
-*/
-private double theta;
 	
 
 //Constructors ******************************************************
@@ -31,12 +22,12 @@ public PolarCoords(double rho, double theta)
 
 public double getXorRho()
 {
- return this.rho;
+ return xOrRho;
 }
 
 public double getYorTheta()
 {
- return this.theta;
+ return yOrTheta;
 }
 
 	
@@ -54,8 +45,8 @@ public PointCP convertStorageToPolar()
 public PointCP convertStorageToCartesian()
 {
    //Calculate X and Y
-   double x = Math.cos(Math.toRadians(theta) * rho);
-   double y = Math.sin(Math.toRadians(theta) * rho);
+   double x = Math.cos(yOrTheta)*xOrRho;
+   double y = Math.sin(yOrTheta) * xOrRho;
   PointCP cartesian = new Cartesian(x, y);
   return cartesian;
 
@@ -69,6 +60,6 @@ public PointCP convertStorageToCartesian()
 */
 public String toString()
 {
-	return "Stored as Polar" + getXorRho() + "," + getYorTheta() + ")\n";
+	return "Stored as Polar [" + getXorRho() + "," + getYorTheta() + "]\n";
 }
 }

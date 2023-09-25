@@ -44,7 +44,7 @@ public static void main(String[] args)
  {
 	 if(args[0].toUpperCase().charAt(0) == 'P') {
 		 point = new PolarCoords(Double.valueOf(args[1]).doubleValue(), Double.valueOf(args[2]).doubleValue());
-	 }else if(args[0].toUpperCase().charAt(0) == 'C') {
+	 }else {
 		 point = new Cartesian(Double.valueOf(args[1]).doubleValue(), Double.valueOf(args[2]).doubleValue());
 	 }
  }
@@ -66,13 +66,9 @@ public static void main(String[] args)
    }
  }
  System.out.println("\nYou entered:\n" + point);
- for(int i=0; i<20; i++) {
-	 point.convertStorageToCartesian();
-	 if(i%5 == 0) {
-		 System.out.println("\nAfter asking to store as Cartesian:\n" + point);
-		 point.convertStorageToPolar();
-		 System.out.println("\nAfter asking to store as Polar:\n" + point);
-	 }
+ for(int i=0; i<5; i++) {
+	 System.out.println("\nAfter asking to store as Cartesian:\n" + point.convertStorageToCartesian());
+	 System.out.println("\nAfter asking to store as Polar:\n" + point.convertStorageToPolar());
  }
 
 }
@@ -165,6 +161,10 @@ private static PointCP getInput() throws IOException
    isOK = false;
  }
  //Return a new PointCP object
- return (new PointCP(coordType, a, b));
+ if(coordType == 'C') {
+	 return new Cartesian(a,b);
+ }else {
+	return new PolarCoords(a,b); 
+ }
 }
 }
