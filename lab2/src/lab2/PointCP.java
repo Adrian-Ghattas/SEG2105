@@ -51,12 +51,12 @@ public abstract double getYorTheta();
 /**
 * Converts Cartesian coordinates to Polar coordinates.
 */
-public abstract void convertStorageToPolar();
+public abstract PointCP convertStorageToPolar();
 	
 /**
 * Converts Polar coordinates to Cartesian coordinates.
 */
-public abstract void convertStorageToCartesian();
+public abstract PointCP convertStorageToCartesian();
 
 /**
 * Returns information about the coordinates.
