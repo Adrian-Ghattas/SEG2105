@@ -42,9 +42,11 @@ public static void main(String[] args)
  // If he did not, prompt the user for them.
  try
  {
-   point = new PointCP(args[0].toUpperCase().charAt(0), 
-     Double.valueOf(args[1]).doubleValue(), 
-     Double.valueOf(args[2]).doubleValue());
+	 if(args[0].toUpperCase().charAt(0) == 'P') {
+		 point = new PolarCoords(Double.valueOf(args[1]).doubleValue(), Double.valueOf(args[2]).doubleValue());
+	 }else if(args[0].toUpperCase().charAt(0) == 'C') {
+		 point = new Cartesian(Double.valueOf(args[1]).doubleValue(), Double.valueOf(args[2]).doubleValue());
+	 }
  }
  catch(Exception e)
  {

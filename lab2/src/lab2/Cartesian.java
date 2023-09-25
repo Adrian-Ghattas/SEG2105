@@ -17,7 +17,7 @@ public class Cartesian extends PointCP{
 	public PointCP convertStorageToPolar() {
 		super.xOrRho = Math.sqrt(xOrRho*xOrRho + yOrTheta*yOrTheta);
         super.yOrTheta = Math.atan2(yOrTheta, xOrRho);
-        Polar polar = new Polar(xOrRho, yOrTheta);
+        PolarCoords polar = new PolarCoords(xOrRho, yOrTheta);
         return polar;
 	}
 
