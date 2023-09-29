@@ -45,8 +45,8 @@ public PointCP convertStorageToPolar()
 public PointCP convertStorageToCartesian()
 {
    //Calculate X and Y
-   double x = Math.cos(yOrTheta)*xOrRho;
-   double y = Math.sin(yOrTheta) * xOrRho;
+   double x = Math.cos(Math.toRadians(yOrTheta)) * xOrRho;
+   double y = Math.sin(Math.toRadians(yOrTheta)) * xOrRho;
   PointCP cartesian = new Cartesian(x, y);
   return cartesian;
 
