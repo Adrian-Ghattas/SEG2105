@@ -2,6 +2,7 @@ package com.example.simplecalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -18,6 +19,11 @@ public class MainActivity extends AppCompatActivity {
     private boolean hasDot = false;
 
     private boolean requiresCleaning = false;
+
+    private boolean toDivide = false;
+    private boolean toMultiply = false;
+    private boolean toSubtract = false;
+    private boolean toAdd = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,7 +87,69 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickFunctionButton(View view) {
-        // Add your code here...
+        //Getting ID of pressed Button
+        int pressID = view.getId();
+
+        if (pressID == R.id.buttonDiv) {
+            toDivide = true;
+            toMultiply = false;
+            toSubtract = false;
+            toAdd = false;
+            if (data01 == 0 && !resultText.getText().toString().equals("")) {
+                data01 = Double.parseDouble(resultText.getText().toString());
+            }
+            resultText.setText("");
+            view.setBackgroundColor(Color.rgb(224,79,233));
+        } else if (pressID == R.id.buttonMul) {
+            toDivide = false;
+            toMultiply = true;
+            toSubtract = false;
+            toAdd = false;
+            if (data01 == 0 && !resultText.getText().toString().equals("")) {
+                data01 = Double.parseDouble(resultText.getText().toString());
+            }
+            resultText.setText("");
+            view.setBackgroundColor(Color.rgb(224,79,233));
+        } else if (pressID == R.id.buttonMinus) {
+            toDivide = false;
+            toMultiply = false;
+            toSubtract = true;
+            toAdd = false;
+            if (data01 == 0 && !resultText.getText().toString().equals("")) {
+                data01 = Double.parseDouble(resultText.getText().toString());
+            }
+            resultText.setText("");
+            view.setBackgroundColor(Color.rgb(224,79,233));
+        } else if (pressID == R.id.buttonPlus) {
+            toDivide = false;
+            toMultiply = false;
+            toSubtract = false;
+            toAdd = true;
+            if (data01 == 0 && !resultText.getText().toString().equals("")) {
+                data01 = Double.parseDouble(resultText.getText().toString());
+            }
+            resultText.setText("");
+            view.setBackgroundColor(Color.rgb(224,79,233));
+        } else if (pressID == R.id.buttonEq) {
+            if(!resultText.getText().toString().equals("")){
+                data02 = Double.parseDouble(resultText.getText().toString());
+                if(toDivide){
+                    double result = data01 / data02;
+                    resultText.setText(String.valueOf(result));
+                } else if (toMultiply) {
+                    double result = data01 * data02;
+                    resultText.setText(String.valueOf(result));
+                } else if (toSubtract) {
+                    double result = data01 - data02;
+                    resultText.setText(String.valueOf(result));
+                } else if (toAdd) {
+                    double result = data01 + data02;
+                    resultText.setText(String.valueOf(result));
+                }
+            } else {
+                resultText.setText("ERROR");
+            }
+        }
     }
 
 }
