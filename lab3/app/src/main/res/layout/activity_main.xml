@@ -14,7 +14,7 @@
         android:layout_marginTop="70dp"
         android:ems="10"
         android:inputType="number"
-        android:textSize="20sp"
+        android:textSize="48sp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
