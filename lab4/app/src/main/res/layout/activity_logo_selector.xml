@@ -6,4 +6,69 @@
     android:layout_height="match_parent"
     tools:context=".LogoSelectorActivity">
 
+    <TextView
+        android:id="@+id/selectLogoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select a new Logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.102" />
+
+    <ImageView
+        android:id="@+id/teamid01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="setTeamIcon"
+        app:srcCompat="@drawable/ic_logo_01"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="184dp" />
+
+    <ImageView
+        android:id="@+id/teamid02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="setTeamIcon"
+        app:srcCompat="@drawable/ic_logo_02"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="184dp" />
+
+    <ImageView
+        android:id="@+id/teamid03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="setTeamIcon"
+        app:srcCompat="@drawable/ic_logo_03"
+        tools:layout_editor_absoluteX="279dp"
+        tools:layout_editor_absoluteY="182dp" />
+
+    <ImageView
+        android:id="@+id/teamid04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="setTeamIcon"
+        app:srcCompat="@drawable/ic_logo_04"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="333dp" />
+
+    <ImageView
+        android:id="@+id/teamid05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="setTeamIcon"
+        app:srcCompat="@drawable/ic_logo_05"
+        tools:layout_editor_absoluteX="149dp"
+        tools:layout_editor_absoluteY="333dp" />
+
+    <ImageView
+        android:id="@+id/teamid06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="setTeamIcon"
+        app:srcCompat="@drawable/ic_logo_00"
+        tools:layout_editor_absoluteX="279dp"
+        tools:layout_editor_absoluteY="333dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
