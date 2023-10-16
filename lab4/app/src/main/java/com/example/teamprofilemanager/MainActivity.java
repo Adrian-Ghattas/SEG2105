@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
         ImageView logoImage = (ImageView) findViewById(R.id.logoImage);
         drawableName = "ic_logo_00";
         int imageID = data.getIntExtra("imageID", R.id.teamid00);

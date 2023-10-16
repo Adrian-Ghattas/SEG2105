@@ -19,7 +19,7 @@
         app:layout_constraintVertical_bias="0.102" />
 
     <ImageView
-        android:id="@+id/teamid01"
+        android:id="@+id/teamid00"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="setTeamIcon"
@@ -28,7 +28,7 @@
         tools:layout_editor_absoluteY="184dp" />
 
     <ImageView
-        android:id="@+id/teamid02"
+        android:id="@+id/teamid01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="setTeamIcon"
@@ -37,7 +37,7 @@
         tools:layout_editor_absoluteY="184dp" />
 
     <ImageView
-        android:id="@+id/teamid03"
+        android:id="@+id/teamid02"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="setTeamIcon"
@@ -46,7 +46,7 @@
         tools:layout_editor_absoluteY="182dp" />
 
     <ImageView
-        android:id="@+id/teamid04"
+        android:id="@+id/teamid03"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="setTeamIcon"
@@ -55,7 +55,7 @@
         tools:layout_editor_absoluteY="333dp" />
 
     <ImageView
-        android:id="@+id/teamid05"
+        android:id="@+id/teamid04"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="setTeamIcon"
@@ -64,7 +64,7 @@
         tools:layout_editor_absoluteY="333dp" />
 
     <ImageView
-        android:id="@+id/teamid06"
+        android:id="@+id/teamid05"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="setTeamIcon"

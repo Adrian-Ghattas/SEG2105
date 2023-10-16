@@ -16,10 +16,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo" />
+        app:layout_constraintTop_toBottomOf="@+id/logoImage" />
 
     <ImageView
-        android:id="@+id/logo"
+        android:id="@+id/logoImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
@@ -30,7 +30,7 @@
         app:srcCompat="@drawable/ic_logo_00" />
 
     <EditText
-        android:id="@+id/teamName"
+        android:id="@+id/teamNameViewId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
@@ -42,7 +42,7 @@
         app:layout_constraintTop_toBottomOf="@+id/teamManagerText" />
 
     <EditText
-        android:id="@+id/teamPostalCode"
+        android:id="@+id/postalCodeId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -52,7 +52,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/teamName" />
+        app:layout_constraintTop_toBottomOf="@+id/teamNameViewId" />
 
     <Button
         android:id="@+id/googleMapsButton"
@@ -63,7 +63,7 @@
         android:text="Open in Google Maps"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/teamPostalCode" />
+        app:layout_constraintTop_toBottomOf="@+id/postalCodeId" />
 
     <Button
         android:id="@+id/submitButton"
