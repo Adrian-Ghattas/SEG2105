@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(intent, 0);
     }
 
-    public void sumbit(View view) {
+    public void submit(View view) {
         EditText teamNameView = (EditText)
                 findViewById(R.id.teamNameViewId);
         EditText postalCodeView = (EditText)
