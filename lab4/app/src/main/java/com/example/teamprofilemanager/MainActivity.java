@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
+
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         ImageView logoImage = (ImageView) findViewById(R.id.logoImage);
         drawableName = "ic_logo_00";
