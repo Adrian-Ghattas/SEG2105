@@ -46,10 +46,8 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         ImageView logoImage = (ImageView) findViewById(R.id.logoImage);
         drawableName = "ic_logo_00";
-        int imageID = data.getIntExtra("imageID", R.id.teamid00);
-        if (imageID == R.id.teamid00) {
-            drawableName = "ic_logo_00";
-        } else if (imageID == R.id.teamid01) {
+        int imageID = data.getIntExtra("imageID", R.id.teamid01);
+        if (imageID == R.id.teamid01) {
             drawableName = "ic_logo_01";
         } else if (imageID == R.id.teamid02) {
             drawableName = "ic_logo_02";
@@ -59,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
             drawableName = "ic_logo_04";
         } else if (imageID == R.id.teamid05) {
             drawableName = "ic_logo_05";
+        } else if (imageID == R.id.teamid00) {
+            drawableName = "ic_logo_00";
         } else {
             drawableName = "ic_logo_00";
         }
