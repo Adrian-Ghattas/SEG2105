@@ -65,4 +65,22 @@ public class MyDBHandler extends SQLiteOpenHelper {
         db.close();
         return product;
     }
+
+    public boolean deleteProduct(String productname) {
+        boolean result = false;
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "Select * FROM" + TABLE_PRODUCTS + "WHERE " +
+                COLUMN_PRODUCTNAME + " = \"" + productname + "\"";
+        Cursor cursor = db.rawQuery(query, null);
+
+        if (cursor.moveToFirst()) {
+            String idStr = cursor.getString(0);
+            db.delete(TABLE_PRODUCTS, COLUMN_ID + " = " + idStr, null);
+            cursor.close();
+            result = true;
+        }
+        db.close();
+        return result;
+    }
 }
